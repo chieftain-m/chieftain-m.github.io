@@ -147,7 +147,7 @@
                 
 <div class="primary-container content-box is-flex-desktop clear-padding bottom-line" style="margin-bottom: 25px;">
     <div class="column  is-7-desktop">
-        <a href="/2020/01/29/PAT B/">
+        <a href="/2020/03/03/大整数计算/">
             <div class="full-height post-hover"
                  style="
                          background-image: url('');
@@ -157,7 +157,7 @@
                          ">
                     <div class=" is-flex flex-column center content has-text-centered full-height has-padding content-bg-mask">
                         <h1 class="title text-shadow" style="margin-bottom: 15px;">
-                            PAT B
+                            大整数计算
                         </h1>
                         <div>
                         
@@ -165,12 +165,15 @@
                         
                         </div>
                         <p class="post-content-text is-marginless has-padding text-shadow">
-                            PAT BPAT的题解，刷PAT顺手存一下，范围从B1001-B1095
-\1. 基本的C/C++的代码设计能力，以及相关开发环境的基本调试技巧；
-\2. 理解并掌握最基本的数据存储结构，即：数组、链表；
-\3. 理解并熟练编程实现与基..
+                            #include&lt;bits/stdc++.h&gt;
+using namespace std;
+struct bign{
+    int d[1000];
+    int len;
+    bign(){
+        mems..
                         </p>
-                        <p class="date text-shadow">2020-01-29</p>
+                        <p class="date text-shadow">2020-03-03</p>
                         <button class="button is-info is-small">Read More</button>
                     </div>
             </div>
@@ -180,48 +183,90 @@
         <div class="full-height is-flex flex-column justify-space-between" style="min-height: 350px;">
             
                 
-<a class="post-hover" href="/2020/01/29/hello-world/" style="height: 48.5%">
+<a class="post-hover" href="/2020/02/23/素数/" style="height: 48.5%">
     <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
         <div class="content-bg-mask full-width full-height has-padding">
             <h3 class="title is-marginless text-shadow">
-                Hello World
+                素数
             </h3>
             
             
             
             <p class="sub-title text-shadow"></p>
             <p class="is-marginless text-shadow post-content-text">
-                Welcome to Hexo! This is your very first post. C..
+                质数是指在大于1的自然数中，除了1和它本身以外不再有其他因数的自然数。
+(1)常规方法（复杂度 ..
+            </p>
+            <p class="date text-shadow is-marginless">2020-02-23</p>
+        </div>
+    </div>
+</a>
+            
+            
+                
+<a class="post-hover" href="/2020/01/29/PAT B/" style="height: 48.5%">
+    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
+        <div class="content-bg-mask full-width full-height has-padding">
+            <h3 class="title is-marginless text-shadow">
+                PAT B
+            </h3>
+            
+            
+            
+            <p class="sub-title text-shadow"></p>
+            <p class="is-marginless text-shadow post-content-text">
+                PAT BPAT的题解，刷PAT顺手存一下，范围从B1001-B1095；
+\1. 基本的C/C..
             </p>
             <p class="date text-shadow is-marginless">2020-01-29</p>
         </div>
     </div>
 </a>
-            
             
         </div>
     </div>
     <div class="column is-12 is-hidden-desktop">
         
         
-<a class="post-hover" href="/2020/01/29/hello-world/" style="height: 48.5%">
+<a class="post-hover" href="/2020/02/23/素数/" style="height: 48.5%">
     <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
         <div class="content-bg-mask full-width full-height has-padding">
             <h3 class="title is-marginless text-shadow">
-                Hello World
+                素数
             </h3>
             
             
             
             <p class="sub-title text-shadow"></p>
             <p class="is-marginless text-shadow post-content-text">
-                Welcome to Hexo! This is your very first post. C..
+                质数是指在大于1的自然数中，除了1和它本身以外不再有其他因数的自然数。
+(1)常规方法（复杂度 ..
+            </p>
+            <p class="date text-shadow is-marginless">2020-02-23</p>
+        </div>
+    </div>
+</a>
+        
+        
+        
+<a class="post-hover" href="/2020/01/29/PAT B/" style="height: 48.5%">
+    <div class="content is-hidden-touch full-height overflow-hidden" style="background-image: url('')">
+        <div class="content-bg-mask full-width full-height has-padding">
+            <h3 class="title is-marginless text-shadow">
+                PAT B
+            </h3>
+            
+            
+            
+            <p class="sub-title text-shadow"></p>
+            <p class="is-marginless text-shadow post-content-text">
+                PAT BPAT的题解，刷PAT顺手存一下，范围从B1001-B1095；
+\1. 基本的C/C..
             </p>
             <p class="date text-shadow is-marginless">2020-01-29</p>
         </div>
     </div>
 </a>
-        
         
     </div>
 </div>
@@ -231,6 +276,60 @@
                 
                     
                         <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2020/02/23/素数/">
+                            <div class="columns" style="min-height: 230px;">
+                                
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>素数</h3>
+                                        
+                                        <p>
+                                            
+                                        </p>
+                                        <p>
+                                            质数是指在大于1的自然数中，除了1和它本身以外不再有其他因数的自然数。
+(1)常规方法（复杂度 O（n根号n））bool isprime(int n){    if(n&lt;=1)    return false;    for(int i=2;i&lt;=sqrt(n);i++){        if(n%i)    return false;   ..
+                                        </p>
+                                        <p>2020-02-23</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    
+                
+                    
+                        <div class="content-box  is-hidden-desktop" style="margin-bottom: 27px;">
+                            <a class="post-hover" href="/2020/01/29/PAT B/">
+                            <div class="columns" style="min-height: 230px;">
+                                
+                                <div class="column is-8-desktop post-content is-flex align-center">
+                                    <div class="content">
+                                        <h3>PAT B</h3>
+                                        
+                                        <p>
+                                            
+                                        </p>
+                                        <p>
+                                            PAT BPAT的题解，刷PAT顺手存一下，范围从B1001-B1095；
+\1. 基本的C/C++的代码设计能力，以及相关开发环境的基本调试技巧；
+\2. 理解并掌握最基本的数据存储结构，即：数组、链表；
+\3. 理解并熟练编程实现与基本数据结构相关的基础算法，包括递归、排序、查找等；
+\4. 能够分析算法的时间复杂度、空间复杂度和算法稳定性；
+\5...
+                                        </p>
+                                        <p>2020-01-29</p>
+                                        <button class="button is-small">Read More</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </a>
+                        </div>
+                    
+                
+                    
+                        <div class="content-box  " style="margin-bottom: 27px;">
                             <a class="post-hover" href="/2020/01/29/hello-world/">
                             <div class="columns" style="min-height: 230px;">
                                 
